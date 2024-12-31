@@ -36,7 +36,21 @@ public class ProductController {
     @PostMapping("/product")
     public void addProduct(@RequestBody Product product)
     {
-        System.out.println(product);
         service.addNewProduct(product);
+    }
+
+    @PutMapping("/product")
+    public ResponseEntity<String> updateProduct(@RequestBody Product product)
+    {
+        Product p = service.updateProduct(product);
+        if(p != null)
+        {
+            return new ResponseEntity<>("Updated", HttpStatus.OK);
+        }
+        else
+        {
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
+
     }
 }

@@ -27,7 +27,7 @@ public class ProductService {
     public Product getProductById(int id) {
         return prodRepo.findById(id).orElse(null);
     }
-    
+
     public void addNewProduct(Product product) {
         try {
             prodRepo.save(product);
@@ -35,5 +35,9 @@ public class ProductService {
             // Handle conflict, e.g., refresh the entity or retry
             System.out.println("Conflict detected: " + e.getMessage());
         }
+    }
+
+    public Product updateProduct(Product product) {
+        return prodRepo.save(product);
     }
 }
