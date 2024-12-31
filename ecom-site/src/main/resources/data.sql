@@ -1,5 +1,5 @@
 INSERT INTO PRODUCT (AVAILABILITY, BRAND, CATEGORY, DESCRIPTION, NAME, PRICE, QUANTITY, RELEASE_DATE)
-VALUES  (1, 'BrandA', 'Electronics', 'A high-quality smartphone', 'Smartphone X', 699.99, 50, '2023-09-15');
+VALUES  (1, 'BrandA', 'Electronics', 'A high-quality smartphone', 'Smartphone X', 699.99, 50, '2023-09-14');
 
 
 INSERT INTO PRODUCT (AVAILABILITY, BRAND, CATEGORY, DESCRIPTION, NAME, PRICE, QUANTITY, RELEASE_DATE)

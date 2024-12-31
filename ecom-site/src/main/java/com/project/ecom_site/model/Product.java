@@ -1,5 +1,6 @@
 package com.project.ecom_site.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.*;
@@ -34,6 +35,7 @@ public class Product {
     private String category;
 
     @JsonProperty("releaseDate")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy", timezone = "UTC")
     private Date releaseDate;
 
     @JsonProperty("availability")
