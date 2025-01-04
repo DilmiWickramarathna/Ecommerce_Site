@@ -53,4 +53,20 @@ public class ProductController {
         }
 
     }
+
+    @DeleteMapping ("/product/{id}")
+    public ResponseEntity<String> updateProduct(@PathVariable int id)
+    {
+        Product p = service.getProductById(id);
+        if(p != null)
+        {
+            service.deleteProduct(id);
+            return new ResponseEntity<>("Deleted", HttpStatus.OK);
+        }
+        else
+        {
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
+
+    }
 }
